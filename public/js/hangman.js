@@ -100,16 +100,7 @@ function resetButton() {
     document.getElementById("myForm").reset();
 }
 
-var guessesLeft;
 
-function drawHangman() {
-    guessesLeft--;
-    let p = hangman[guessesLeft];
-    let lines = document.querySelector('.hangman').querySelectorAll('svg');
-    for (var i = 0; i < lines.length; i++) {
-        lines[i].children[0].classList.remove('draw');
-    }
-}
 
 function playAgain() {
     //guesses = [];
@@ -124,24 +115,9 @@ function playAgain() {
 function checkProgress() {
     var progress = 0;
     for (count = 0; count <= 5; count++) {
-        progress += 20;
-    }
-    /*if (count = 1) {
-        progress += 20;
-    }
-    if (count = 2) {
-        progress += 20;
-    }
-    if (count = 3) {
-        progress += 20;
-    }
-    if (count = 4) {
-        progress += 20;
-    }
-    if (count = 5) {
-        progress += 20;
-    }
-    document.getElementById("progress").value = progress;*/
+        progress += 20;}
+
+    document.getElementById("progress").value = progress;
 }
 
 

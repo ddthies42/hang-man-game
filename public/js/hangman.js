@@ -65,8 +65,6 @@ function letter() {
         for (var i = 0; i < answer.length; i++) {
             if (answer[i] === letter) {
                 guesses[i] = letter;
-            } else {
-                drawHangman();
             }
         }
         if (letter === answer.toString()) {

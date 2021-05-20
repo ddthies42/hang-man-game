@@ -15,6 +15,7 @@
 </head>
 <body>
 <div class="container">
+    <a href="index.html">My Home Page</a>
     <h2>Welcome to Hangman Game</h2>
     <div class="form-div">
         <form action="/action_page.php" id="myForm">
@@ -40,7 +41,7 @@
         <div id="categoryName">
         </div>
         <input type="text" id="letter">
-        <button value="letter" onclick="letter()" id="guessBtn">Guess</button>
+        <button value="letter" onclick="letter()" id="guessBtn" class="btn btn-info">Guess</button>
         <div class="input-div">
             <progress class="progress-bar" id="progress" value="70" max="100"></progress>
         </div>
@@ -52,7 +53,7 @@
     </div>
 
     <div class="reset">
-        <input type="reset" onclick="playAgain()">
+        <input type="reset" value="Play Again!" onclick="playAgain()">
     </div>
 </div>
 

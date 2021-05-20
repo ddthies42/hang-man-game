@@ -9,9 +9,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script type="text/javascript" src="js/hangman.js"></script>
+
 </head>
 <body>
+<div class="container">
+    <h2>Welcome to Hangman Game</h2>
+    <div class="form-div">
+        <form action="/action_page.php" id="myForm">
+            <div class="input-div">
+                Please choose a category: <br>
+                <input type="radio" name="category" id="rdCountry" required> Country
+                <input type="radio" name="category" id="rdSport"> Sport
+                <br>
+            </div>
+            <div class="input-div">
+                Please choose a maximum number of letter you want to guess:
+                <input type="number" name="maximum-Number" value="15" min="5" max="15" id="maxNum">
+            </div>
+        </form>
+        <br>
+        <div class="submit">
+            <button onclick="submitButtonClicked()" class="btn btn-info">Play</button>
+            <input type="reset" class="btn btn-info" onclick="resetButton()">
+        </div>
+        <br>
+    </div>
+    <div id="output">
+        <div id="categoryName">
+        </div>
+        <input type="text" id="letter">
+        <button value="letter" onclick="letter()" id="guessBtn">Guess</button>
+        <div class="input-div">
+            <progress class="progress-bar" id="progress" value="70" max="100"></progress>
+        </div>
+        <p id="answer"></p>
+        <p id="counter"></p>
+        <p id="stat"></p>
+        <div id="guessedLetter"></div>
+        <div id="hangman"></div>
+    </div>
+
+    <div class="reset">
+        <input type="reset" onclick="playAgain()">
+    </div>
+</div>
+
+
+
+
 
 </body>
 </html>
